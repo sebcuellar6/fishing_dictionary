@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the body takes the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    font-family: 'Major Mono Display', monospace; /* Apply the custom font */
+}
+
+#navBtns {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: center;
+}
+
+
+.sBtn {
+    margin: 0; /* Remove default margin */
+}
+
+/* Ensure h1 in the main span is centered as well */
+#head {
+    text-align: center;
+}
