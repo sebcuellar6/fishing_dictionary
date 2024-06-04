@@ -39,6 +39,10 @@ app.get('/species/:id', SpeciesController.getSpeciesById)
 app.get('/info/:id', InfoController.getInfoById)
 app.get('/tactics/:id', TacticsController.getTacticsById)
 
+//get by species ID
+app.get('/tactics/species/:id', TacticsController.getTacticsBySpeciesId)
+app.get('/info/species/:id', InfoController.getInfoBySpeciesId)
+
 //create
 app.post('/species', SpeciesController.createSpecies)
 app.post('/info', InfoController.createInfo)

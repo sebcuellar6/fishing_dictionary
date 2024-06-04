@@ -27,6 +27,7 @@ async function refresh() {
             const newCard = document.createElement('div')
             newCard.classList.add('card')
             newCard.setAttribute('id', speciesObject._id)
+            console.log(speciesObject._id)
 
             // Make element for image and append it
             const newImage = document.createElement('img')
@@ -65,15 +66,6 @@ async function refresh() {
                 newLocations.innerText = `Locations: ${speciesInfo.locations}`
                 newCard.appendChild(newLocations)
 
-                const newFavoriteFoods = document.createElement('div')
-                newFavoriteFoods.classList.add('species-favoriteFoods')
-                newFavoriteFoods.innerText = `Favorite Foods: ${speciesInfo.favouriteFoods}`
-                newCard.appendChild(newFavoriteFoods)
-
-                const newDescription = document.createElement('div')
-                newDescription.classList.add('species-description')
-                newDescription.innerText = `Description: ${speciesInfo.description}`
-                newCard.appendChild(newDescription)
             }
 
             // Find the corresponding tactics object for this species
@@ -98,6 +90,7 @@ async function refresh() {
                     nameCopy = speciesNameArray[speciesIdArray.indexOf(idCopy)]
                     localStorage.setItem('speciesId', idCopy)
                     localStorage.setItem('speciesName', nameCopy)
+                    
                     console.log(nameCopy)
                     console.log(idCopy)
                     window.open('infoTactics', '_blank')

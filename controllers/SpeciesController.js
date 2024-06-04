@@ -25,6 +25,7 @@ const getSpeciesById = async (req, res) => {
     }
 }
 
+
 const createSpecies = async (req, res) => {
     try {
         const newObject = await new Species(req.body)

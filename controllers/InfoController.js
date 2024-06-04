@@ -25,6 +25,23 @@ const getInfoById = async (req, res) => {
     }
 }
 
+const getInfoBySpeciesId = async (req, res) => {
+    try {
+        const { id } = req.params
+        const singleObject = await Info.findOne({ species_id: id })
+        if (singleObject) {
+            return res.json(singleObject)
+        }
+        return res.status(404).send(`That species doesn't exist`)
+    } catch (error) {
+        if (error.name === 'CastError' && error.kind === 'ObjectId') {
+            return res.status(404).send(`That species doesn't exist`)
+        }
+        return res.status(500).send(error.message)
+    }
+}
+
+
 const createInfo = async (req, res) => {
     try {
         const newObject = await new Info(req.body)
@@ -77,5 +94,6 @@ module.exports = {
     getInfoById,
     createInfo,
     updateInfo,
-    deleteInfo
+    deleteInfo,
+    getInfoBySpeciesId
 }
