@@ -16,10 +16,10 @@ const getTacticsById = async (req, res) => {
         if (singleObject) {
             return res.json(singleObject)
         }
-        return res.status(404).send(`that Bicycle doesn't exist`)
+        return res.status(404).send(`that Tactic doesn't exist`)
     } catch (error) {
         if (error.name === 'CastError' && error.kind === 'ObjectId') {
-            return res.status(404).send(`That Bicycle doesn't exist`)
+            return res.status(404).send(`That Tactic doesn't exist`)
         }
         return res.status(500).send(error.message);
     }
@@ -34,7 +34,7 @@ const createTactics = async (req, res) => {
         });
     } catch (error) {
         // if (error.name === 'CastError' && error.kind === 'ObjectId') {
-        //     return res.status(404).send(`That Bicycle doesn't exist`)
+        //     return res.status(404).send(`That Tactic doesn't exist`)
         // }
         return res.status(500).json({ error: error.message })
     }
@@ -47,10 +47,10 @@ const updateTactics = async (req, res) => {
         if (changedObject) {
             return res.status(200).json(changedObject)
         }
-        throw new Error("Bicycle not found and can't be updated")
+        throw new Error("Tactic not found and can't be updated")
     } catch (error) {
         if (error.name === 'CastError' && error.kind === 'ObjectId') {
-            return res.status(404).send(`That Bicycle doesn't exist`)
+            return res.status(404).send(`That Tactic doesn't exist`)
         }
         return res.status(500).send(error.message);
     }
@@ -61,12 +61,12 @@ const deleteTactics = async (req, res) => {
         const { id } = req.params;
         const erasedObject = await Tactics.findByIdAndDelete(id)
         if (erasedObject) {
-            return res.status(200).send("Bicycle deleted");
+            return res.status(200).send("Tactic deleted");
         }
-        throw new Error("Bicycle not found and can't be deleted");
+        throw new Error("Tactic not found and can't be deleted");
     } catch (error) {
         if (error.name === 'CastError' && error.kind === 'ObjectId') {
-            return res.status(404).send(`That Bicycle doesn't exist`)
+            return res.status(404).send(`That Tactic doesn't exist`)
         }
         return res.status(500).send(error.message);
     }

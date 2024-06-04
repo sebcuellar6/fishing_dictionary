@@ -24,7 +24,7 @@ const main = async () => {
         name: 'Largemouth Bass1',
         saltFreshOrBoth: 'Fresh',
         prevelance: 'Common',
-        pic: 'bgPics/bassBackground.jpeg'
+        pic: 'bassBackground.jpeg'
   })
   await species1.save()
 
@@ -85,6 +85,13 @@ await species4.save()
   favouriteFoods: 'Small baitfish, crawfish, worms, small rodents and birds, insects, and small amphibiens and reptiles as well as any other fish that will fit in their mouth.',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque erat nunc, ultrices vitae est finibus, ullamcorper ultrices risus. Integer vehicula eros vel metus feugiat lacinia. Nulla non consequat nulla, ut rhoncus ipsum. Aenean et scelerisque sem. Nulla ullamcorper odio id lacus egestas, id pulvinar metus scelerisque. Sed quis tortor nibh. Proin dui dui, egestas eget consectetur non, aliquam ullamcorper felis.',
 },
+{
+  species_id: species4._id,
+  temperment: 'Aggressive',
+  locations: 'All States besides Alaska',
+  favouriteFoods: 'Small baitfish, crawfish, worms, small rodents and birds, insects, and small amphibiens and reptiles as well as any other fish that will fit in their mouth.',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque erat nunc, ultrices vitae est finibus, ullamcorper ultrices risus. Integer vehicula eros vel metus feugiat lacinia. Nulla non consequat nulla, ut rhoncus ipsum. Aenean et scelerisque sem. Nulla ullamcorper odio id lacus egestas, id pulvinar metus scelerisque. Sed quis tortor nibh. Proin dui dui, egestas eget consectetur non, aliquam ullamcorper felis.',
+},
   
   ]
 
@@ -125,8 +132,7 @@ await species4.save()
           },
     ]
     
-    // bicycleArray.save()
-    // bellArray.save()
+   
 
     await Tactics.insertMany(tacticsArray)
     console.log('Created tactics!')

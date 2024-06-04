@@ -1,6 +1,6 @@
 const express = require('express')
 const db = require('./db')
-const PORT = process.env.PORT || 3002
+const PORT = process.env.PORT || 3003
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
@@ -24,3 +24,35 @@ app.get('/', (req,res) => res.send('fishing server'))
 app.get('/species', SpeciesController.getAllSpecies)
 app.get('/info', InfoController.getAllInfo)
 app.get('/tactics', TacticsController.getAllTactics)
+
+app.get('/tactics/:tacticsId', async (req, res) => {
+    try {
+        const tacticsId = req.params.tacticsId
+        const tactics = await Tactics.findById(tacticsId)
+        res.json(tactics)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
+app.get('/species/:id', SpeciesController.getSpeciesById)
+app.get('/info/:id', InfoController.getInfoById)
+app.get('/tactics/:id', TacticsController.getTacticsById)
+
+//create
+app.post('/species', SpeciesController.createSpecies)
+app.post('/info', InfoController.createInfo)
+app.post('/Tacticss', TacticsController.createTactics)
+
+//update
+app.put('/species/:id', SpeciesController.updateSpecies)
+app.put('/info/:id', InfoController.updateInfo)
+app.put('/tactics/:id', TacticsController.updateTactics)
+
+//delete
+app.delete('/species/:id', SpeciesController.deleteSpecies)
+app.delete('/info/:id', InfoController.deleteInfo)
+app.delete('/tactics/:id', TacticsController.deleteTactics)
+
+//catch all
+app.get('*', (req, res) => res.send('404 page not found'))
