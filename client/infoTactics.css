@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#name, #prevelance, #temperment, #locations, #saltFreshOrBoth, #favouriteFoods, #description, #difficulty, #bowSpear, #baitLure  {
+    padding: 20px;
+}
+
+#favouriteFoods {
+    display: flex;
+    justify-content: center;
+}

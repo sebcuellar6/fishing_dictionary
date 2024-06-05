@@ -36,35 +36,36 @@ try {
 
     const newName = document.createElement('div')
     newName.innerText = `${speciesData.name}`
+    newName.setAttribute('id', 'name')
     newContainer.appendChild(newName)
 
     const newPrevalence = document.createElement('div')
-    newPrevalence.classList.add('species-prevalence')
+    newPrevalence.setAttribute('id', 'prevalence')
     newPrevalence.innerText = `Prevalence: ${speciesData.prevelance}`
     newContainer.appendChild(newPrevalence)
 
     const newTemperment = document.createElement('div')
-    newTemperment.classList.add('species-temperment')
+    newTemperment.setAttribute('id', 'temperment')
     newTemperment.innerText = `Temperment: ${infoData.temperment}`
     newContainer.appendChild(newTemperment)
 
     const newLocations = document.createElement('div')
-    newLocations.classList.add('species-locations')
+    newLocations.setAttribute('id', 'locations')
     newLocations.innerText = `Locations: ${infoData.locations}`
     newContainer.appendChild(newLocations)
 
     const newSaltFreshOrBoth = document.createElement('div')
-    newSaltFreshOrBoth.classList.add('species-saltFreshOrBoth')
+    newSaltFreshOrBoth.setAttribute('id', 'saltFreshOrBoth')
     newSaltFreshOrBoth.innerText = `Habitat: ${speciesData.saltFreshOrBoth}`
     newContainer.appendChild(newSaltFreshOrBoth)
 
     const newFavoriteFoods = document.createElement('div')
-    newFavoriteFoods.classList.add('species-favoriteFoods')
+    newFavoriteFoods.setAttribute('id', 'favoriteFoods')
     newFavoriteFoods.innerText = `Favorite Foods: ${infoData.favouriteFoods}`
     newContainer.appendChild(newFavoriteFoods)
 
     const newDescription = document.createElement('div')
-    newDescription.classList.add('species-description')
+    newDescription.setAttribute('id', 'description')
     newDescription.innerText = `Description: ${infoData.description}`
     newContainer.appendChild(newDescription)
 
@@ -72,20 +73,20 @@ try {
 //add fishing tactics
 
     const newDifficulty = document.createElement('div')
-    newLocations.classList.add('species-difficulty')
+    newLocations.setAttribute('id', 'difficulty')
     newLocations.innerText = `Difficulty: ${tacticsData.difficulty}`
     newContainer.appendChild(newDifficulty)            
     
-    const newBowSpear = document.createElement('div')
-    newBowSpear.classList.add('bowSpear')
-    newBowSpear.innerText = `Bow/Spearfishing: ${tacticsData.bowSpearfish}`
-    newContainer.appendChild(newBowSpear) 
-    
     const newBaitsLures = document.createElement('div')
-    newBaitsLures.classList.add('baitLure')
+    newBaitsLures.setAttribute('id', 'baitLure')
     newBaitsLures.innerText = `Baits & Lures: ${tacticsData.baitsLures}`
-    newContainer.appendChild(newBaitsLures)      
-
+    newContainer.appendChild(newBaitsLures)
+    
+    const newFishRundown = document.createElement('div')
+    newFishRundown.setAttribute('id', 'rundown')
+    newFishRundown.innerText = `Fishing Rundown: ${tacticsData.fishingRundown}`
+    newContainer.appendChild(newFishRundown)
+ 
 
 } catch (error) {
     console.log('Error fetching data', error)

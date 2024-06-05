@@ -66,6 +66,7 @@ async function refresh() {
                 newLocations.innerText = `Locations: ${speciesInfo.locations}`
                 newCard.appendChild(newLocations)
 
+
             }
 
             // Find the corresponding tactics object for this species

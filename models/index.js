@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const Species = require('./species')
 const Info = require('./info')
 const Tactics = require('./tactics')
+const Record = require('./record')
 
 //convert schema to model with the same name
 
@@ -12,5 +13,6 @@ const Tactics = require('./tactics')
 module.exports = {
     Species,
     Info,
-    Tactics
+    Tactics,
+    Record
   }
