@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script defer src="Records.js"></script>
+    <link rel="stylesheet" href="Records.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Records</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 id="title">Records</h1>
+    <h1 id="title">Records Page</h1>
 
-    <div id="recordsContainer"></div>
+    <div id="RecordsContainer"></div>
+
+    <button id="toggleFormButton">Add/Edit Record</button>
     
+    <form id="recordForm">
+        <input type="hidden" id="recordId" name="recordId">
+        <label for="species_name">Species Name:</label>
+        <input type="text" id="species_name" name="species_name" required><br>
+        <label for="length_inches">Length in Inches:</label>
+        <input type="number" id="length_inches" name="length_inches" required><br>
+        <label for="weight_lboz">Weight in Lbs:</label>
+        <input type="number" id="weight_lboz" name="weight_lboz" required><br>
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required><br>
+        <label for="bodyWater">Body of Water:</label>
+        <input type="text" id="bodyWater" name="bodyWater"><br>
+        <label for="anglers_name">Angler's Name:</label>
+        <input type="text" id="anglers_name" name="anglers_name" required><br>
+        <label for="fish_img">Fish Image URL:</label>
+        <input type="text" id="fish_img" name="fish_img" required><br>
+        <button type="submit" id="saveButton">Save Record</button>
+        <button type="submit" id="deleteButton">Delete Record</button>
+    </form>
+
 </body>
 </html>

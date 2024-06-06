@@ -5,6 +5,8 @@ body {
     height: 100vh; /* Ensure the body takes the full height of the viewport */
     margin: 0; /* Remove default margin */
     font-family: 'Major Mono Display', monospace; /* Apply the custom font */
+    background-color: #3E5C76;
+    color: #F0EBD8;
 }
 
 #navBtns {

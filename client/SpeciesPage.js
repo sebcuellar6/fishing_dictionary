@@ -31,7 +31,7 @@ async function refresh() {
 
             // Make element for image and append it
             const newImage = document.createElement('img')
-            newImage.classList.add('fish-img')
+            newImage.classList.add('fish1-img')
             newImage.setAttribute('src', speciesObject.pic)
             newCard.appendChild(newImage)
 

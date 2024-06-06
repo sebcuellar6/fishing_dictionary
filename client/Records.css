@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Major Mono Display', monospace;
+    background-color: #3E5C76;
+    color: #F0EBD8;
+}
+
+#RecordsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    border: 3px solid #1D2D44;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #748CAB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cards:hover {
+    background-color: #616872;
+}
+
+.cards img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+#recordForm {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #748CAB;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+}
+
+#toggleFormButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-right: 220px; /* Adjust this value to place the button properly */
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#toggleFormButton:hover {
+    background-color: #747c84;
+}
+
+#saveButton, #deleteButton {
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+#species-name {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#saveButton:hover {
+    background-color: #747c84;
+}
+
+#deleteButton:hover {
+    background-color: #747c84;
+}

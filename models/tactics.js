@@ -7,6 +7,7 @@ const tacticsSchema = new Schema(
         difficulty: { type: String, required: true },
         baitsLures: { type: String, required: true },
         fishingRundown: { type: String, required: true },
+        fishingPic: { type: String, required: true },
     },
     { timestamps: true },
 )
