@@ -59,6 +59,11 @@ try {
     newSaltFreshOrBoth.innerText = `Habitat: ${speciesData.saltFreshOrBoth}`
     newContainer.appendChild(newSaltFreshOrBoth)
 
+    const newfishingImg = document.createElement('img')
+    newfishingImg.classList.add('fishingImg')
+    newfishingImg.setAttribute('src', tacticsData.fishingPic)
+    newContainer.appendChild(newfishingImg)
+
     const newFavoriteFoods = document.createElement('div')
     newFavoriteFoods.setAttribute('id', 'favoriteFoods')
     newFavoriteFoods.innerText = `Favorite Foods: ${infoData.favouriteFoods}`
@@ -66,7 +71,7 @@ try {
 
     const newDescription = document.createElement('div')
     newDescription.setAttribute('id', 'description')
-    newDescription.innerText = `Description: ${infoData.description}`
+    newDescription.innerText = `Helpful Information: ${infoData.description}`
     newContainer.appendChild(newDescription)
 
     
@@ -75,7 +80,9 @@ try {
     const newDifficulty = document.createElement('div')
     newLocations.setAttribute('id', 'difficulty')
     newLocations.innerText = `Difficulty: ${tacticsData.difficulty}`
-    newContainer.appendChild(newDifficulty)            
+    newContainer.appendChild(newDifficulty)
+    
+    
     
     const newBaitsLures = document.createElement('div')
     newBaitsLures.setAttribute('id', 'baitLure')
@@ -86,6 +93,8 @@ try {
     newFishRundown.setAttribute('id', 'rundown')
     newFishRundown.innerText = `Fishing Rundown: ${tacticsData.fishingRundown}`
     newContainer.appendChild(newFishRundown)
+
+    
  
 
 } catch (error) {

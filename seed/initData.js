@@ -53,7 +53,21 @@ const sharks = await new Species({
 })
 await sharks.save()
 
+const rainbowtrout = await new Species({
+  name: 'Rainbow Trout',
+  saltFreshOrBoth: 'Fresh and Salt',
+  prevelance: 'Common',
+  pic: 'bgPics/trout.jpeg'
+})
+await rainbowtrout.save()
 
+const redSnapper = await new Species({
+  name: 'Red Snapper',
+  saltFreshOrBoth: 'Salwater',
+  prevelance: 'Common',
+  pic: 'bgPics/redSnapper.jpeg'
+})
+await redSnapper.save()
 
 
 
@@ -85,6 +99,20 @@ await sharks.save()
   locations: 'All States on the coast, as well as some channels like the Mississippi',
   favouriteFoods: 'Small baitfish, mullet, other sharks, squid, large animal carcasses, birds, as well as any other fish that will fit in their mouth.',
   description: 'Sharks are fishes and most have the typical fusiform body shape. Like other fishes, sharks are ectothermic (cold-blooded), live in water, have fins, and breathe with gills. However, sharks differ from Osteichthyes fish. One difference is that a sharks skeleton is made of cartilage instead of bone. Another visible difference is that bony fish tend to have a single gill slit, whereas all but two species of shark have 5 gill slits. The characteristic teeth of each species are adapted to that particular species diet. The teeth may be serrated or smooth. Most are used for seizing prey, cutting, or crushing. Some sharks are probably not very picky about what they eat. But certain kinds of sharks eat some foods more than others. For example, hammerhead sharks eat mostly stingrays. Tiger sharks eat sea turtles. And whale sharks eat plankton.',
+},
+{
+  species_id: rainbowtrout._id,
+  temperment: 'Somewhat Aggressive',
+  locations: 'Alaska, California, Washington, Oregon, Idaho, and small parts of northern Montana and Nevada.',
+  favouriteFoods: 'Rainbow trout feed primarily on all stages aquatic invertebrates (nymph, larva, pupa, etc.) like mayflies, caddisflies, stoneflies, midges, and crustaceans (scuds, sowbugs, and crayfish). They will secondarily eat small baitfish, including using the cannibalistic behavior of preying on small rainbow trout. They also eat fish eggs [J1] when present, worms (both aquatic and terrestrial annelids), zooplankton, and daphnia in stillwaters (lakes, reservoirs, and ponds). ',
+  description: 'They prefer cool, clear rivers, streams, and lakes, though some will leave their freshwater homes and follow a river out to the sea. These migratory adults, called steelheads because they acquire more silvery markings, will spend several years in the ocean, but must return to the stream of their birth to spawn.They are members of the salmon family and, like their salmon cousins, can grow quite large. They average about 20 to 30 inches long and around 8 pounds, but can grow as long as 4 feet and weigh up to 53 pounds.',
+},
+{
+  species_id: redSnapper._id,
+  temperment: 'Very Aggressive',
+  locations: 'Gulf of Mexico and along the eastern coasts of North America, Central America, and northern South America.',
+  favouriteFoods: 'Fish are the number one item in their diet, with the most common ones being pipefish, snake eels, searobins, pinfish, striped anchovies, cusk eels, and pigfish. Stomatopods (king shrimp or sea lice) are the second most important food item, followed by several species of crabs. Also eaten are tiny pinhead-size zooplankton and bottom worms. Shrimp make up only a very small portion of their diet.',
+  description: 'Red snapper are most common in the northern Gulf of Mexico, followed by the western Gulf and least common in southern Florida. Small and medium red snapper have a strong attraction to any sort of bottom relief or obstruction - reefs, rocks, ledges, wrecks, offshore oil and gas platforms, and even such small things on the bottom as pipeline valves and 55-gallon drums. As red snapper become larger, over 10 pounds, they seem to spend more time on relatively open bottom. Frequently, concentrations of large "sow" snapper over 20 pounds in weight, are located on open, obstruction less, clay bottoms.',
 },
   
   ]
@@ -123,6 +151,20 @@ await sharks.save()
           baitsLures: 'Natural baits include ladyfish, mullet, threadfin, bonito, mackerel, jack, bluefish, ballyhoo, squid, and lots of other cut/live baits. Artificial baits include topwater, paddle tails, bucktails, spoons, and jerk baits.',
           fishingRundown: 'For smaller Sharks, a medium-heavy action rod with a 5000 reel is a good start. If youre going after larger Sharks, you should have extra-heavy rods with reels around the 10000 size. For braid, smaller setups do good with 20+ pounds, while larger ones require hundreds of yards of over 50 pounds. Your leader is your best friend when it comes to gear for Shark fishing. The wrong leader will result in a quick and easy slice from the razor-sharp teeth of a Shark. You should have a fluorocarbon leader upwards of 60 pounds when fishing for smaller guys. For the larger ones, youll need a 200 lb leader. A lot of anglers also recommend using wire leaders to prevent the risk of the fish cutting the line. Hooks are also important when it comes to your gear for Shark fishing because the incredible strength of these species allows them to easily bend hooks. Its essential to have large, sturdy hooks, such as ones 8/0 and higher, to ensure a good hookset that wont be bent out of shape. Surf fishing for Sharks is quite the adventure. Typically, anglers use a kayak to pass sandbars and drop their line into the deeper waters. After heading back to shore, you sit around and wait until your line starts to take off. Freelining live bait is similar to surf fishing but from a boat. The depths can vary, as this technique is not limited to any specific area. All you really need to do is add a live bait to a circle hook and throw it out into the water. Trolling is commonly used in deep offshore waters. This method involves dragging bait behind a boat at a steady speed. The Sharks that are interested will chase the bait until they can lunge on it.',
           fishingPic: 'bgPics/sharkFishing.jpeg'
+          },
+          {
+          species_id: rainbowtrout._id,
+          difficulty: 'Intermediate',
+          baitsLures: 'Natural baits include minnows, crickets, fish eggs and nightcrawlers. Artificial baits include powerbait, flies, jigs, spinners, spoons, soft plastics, and hard plastics like rapalas.',
+          fishingRundown: 'Cast and retrieve is common for spoons, spinners, Rapalas, and even jigs. You cast to a specific place or use the presentation as a general prospecting technique. This also provides one of the best feelings when a fish strikes because youre tight to the lure. Sit-and-wait presentations generally dangle a fly, jig, or soft plastic beneath a lure. While these presentations are less active, they work extremely well. The best time to sit and wait is when the water is cold and Trout are slow. Jigging motions allow for a vertical presentation that works best with jig head lures or flies. Drop the lure straight down to a depth where you expect to find Trout. Raise and lower the rod to bounce the lure and attract fish. By keeping the lure in the hot zone, youre sure to have a big day!',
+          fishingPic: 'bgPics/troutFishing.jpeg'
+          },
+          {
+          species_id: redSnapper._id,
+          difficulty: 'Easy',
+          baitsLures: 'Natural baits include pilchards, mullet, pinfish, shrimp, and cut bait. Artificial baits include swimbaits, jigs, and jerkbaits.',
+          fishingRundown: 'The most popular option of artificial lures for Snapper fishing is the use of a swimbait and a jig head. These range in colors and sizes, and some come covered in scent. You can even find some that are disguised as bait fish, such as the Gulp! shrimp. Jigs are popular for deep sea fishing for large Snapper. Funky colors, moving features, and sometimes interesting noises attract nearby Snapper and entice them to eat.Jerk baits can be on the water (topwater) or underneath the surface. You jerk the rod to create a jerking, zig-zag motion of the bait. This helps to make it look more realistic. They also tend to make noise to further attract hungry fish. Snappers like structure. They like to be somewhere that gives them a place to hide when they feel threatened. They also like areas that have action from other species, such as bait fish. This can be inshore, such as mangroves, bays, docks, piers, jetties, and oyster beds. But it can also be offshore, such as wrecks, reefs, pilings, and rocky bottoms.',
+          fishingPic: 'bgPics/snapperFishing.jpeg'
           },
           
     ]

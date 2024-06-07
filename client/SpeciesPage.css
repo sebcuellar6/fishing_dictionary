@@ -14,6 +14,11 @@ body {
     font-family: 'Rubik Mono One', monospace;
 }
 
+.card:hover {
+    background-color: #c1c7cf;
+    color: #0D1321;
+}
+
 .species-image {
     max-width: 100%;
     height: auto;
@@ -30,4 +35,5 @@ body {
     justify-content: center;
     background-color: #748CAB; 
     border: 2px solid #1D2D44;
+    font-size: 50px;
 }

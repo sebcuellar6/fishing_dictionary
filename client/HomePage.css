@@ -2,25 +2,52 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ensure the body takes the full height of the viewport */
-    margin: 0; /* Remove default margin */
-    font-family: 'Major Mono Display', monospace; /* Apply the custom font */
+    height: 100vh; 
+    margin: 0; 
+    font-family: 'Major Mono Display', monospace; 
     background-color: #3E5C76;
     color: #F0EBD8;
+    position: relative; 
+    
+}
+
+#head {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 0; 
+    padding: 10px 0; 
+    font-size: 50px;
 }
 
 #navBtns {
     display: flex;
-    flex-direction: column; /* Stack the buttons vertically */
+    flex-direction: column; 
     align-items: center;
 }
 
-
-.sBtn {
-    margin: 0; /* Remove default margin */
+#sBtn {
+    transform: translateY(-20%);
+    z-index: 2;
 }
 
-/* Ensure h1 in the main span is centered as well */
-#head {
-    text-align: center;
+#rBtn {
+    z-index: 2;
+} 
+
+#sBtn:hover, #rBtn:hover {
+    color: #0D1321;
 }
+
+#outline2 {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+
+

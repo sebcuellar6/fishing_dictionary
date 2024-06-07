@@ -4,7 +4,7 @@ body {
     align-items: center;
     margin: 0;
     height: 100vh;
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'Rubik Mono One', monospace;
     background-color: #3E5C76;
     color: #F0EBD8;
 }
@@ -90,4 +90,8 @@ body {
 
 #deleteButton:hover {
     background-color: #747c84;
+}
+
+#title {
+    font-family: 'Major Mono Display', monospace;;
 }

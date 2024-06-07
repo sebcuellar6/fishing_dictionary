@@ -9,10 +9,9 @@ speciesButton.addEventListener('click', function() {
     window.open('SpeciesPage', '_blank')
 })
 
-lureBaitButton.addEventListener('click', function() {
-    window.open('LuresBaits', '_blank')
-})
+
 
 recordsButton.addEventListener('click', function() {
     window.open('Records', '_blank')
 })
+
