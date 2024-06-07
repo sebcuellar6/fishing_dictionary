@@ -11,14 +11,23 @@ This application gives information about different species of fish, and how and 
 
 3. Find species based on other attributes such as temperment
 
-##technology used:
-1. front-end: HTML, CSS, Flex-Box
+## Technology used:
+
+1. front-end: HTML, CSS, Flex-Box, DOM
 
 2. back-end: Mongo, Axios, Mongoose, body-parser, morgan
 
 3. middleware: Express, Cors
 
+![diagram1](FishPage.drawio.png)
+
 ![Diagram](homepage.jpg)
+
+![home](homepage.png)
+
+![species](speciespage.png)
+
+![tactics](tacticpage.png)
 
 ## Things I enjoyed
 
